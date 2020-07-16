@@ -1,7 +1,7 @@
 {
-  "name": "dynamic-restaurant",
+  "name": "dynamic_interfaces",
   "version": "1.0.0",
-  "description": "> One paragraph statement about the project.",
+  "description": "> Practicing dynamic Interfaces.",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/canriquez/dynamic-restaurant.git"
+    "url": ""
   },
   "author": "Carlos Anriquez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/canriquez/dynamic-restaurant/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/canriquez/dynamic-restaurant#readme",
+  "homepage": "",
   "devDependencies": {
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
