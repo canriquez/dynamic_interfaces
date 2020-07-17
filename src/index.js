@@ -11,8 +11,9 @@ image.src = rockSvg;
 
 let arrowTag = document.getElementById('downarrow')
 arrowTag.src = downArrow;
-
+document.body.className += "js-loading";
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.className = document.body.className.replace("js-loading", "");
 
 });
