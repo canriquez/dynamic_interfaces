@@ -16,7 +16,7 @@
   "author": "Carlos Anriquez",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "git@github.com:canriquez/dynamic_interfaces.git"
   },
   "homepage": "",
   "devDependencies": {
