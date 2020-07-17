@@ -34,7 +34,7 @@ main {
     width: 100%;
 }
 
-section {
+#main-title {
     position: fixed;
     top: 50%;
     left: 50%;
