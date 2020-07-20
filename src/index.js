@@ -60,6 +60,92 @@ const processInput = function processInput() {
         errorBox.classList.remove('show-me-error');
       }
       break;
+
+    case 'add1':
+      console.log("i am inside of :" + this.value);
+      t1 = this.value.length > 8;
+      t2 = true;
+      htmlTag = ''
+      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+
+      console.log("current error flag :" + t1 + " error is: " + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
+    case 'add2':
+      console.log("i am inside of :" + this.value);
+      t1 = this.value.length > 8;
+      t2 = true;
+      htmlTag = ''
+      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+
+      console.log("current error flag :" + t1 + " error is: " + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
+    case 'city':
+      console.log("i am inside of :" + this.value);
+      t1 = this.value.length > 8;
+      t2 = true;
+      htmlTag = ''
+      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+
+      console.log("current error flag :" + t1 + " error is: " + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
+    case 'state':
+      console.log("i am inside of :" + this.value);
+      t1 = this.value != 'Choose...';
+      t2 = true;
+      htmlTag = ''
+      if (!t1) { htmlTag += 'select an option please' };
+
+      console.log("current error flag :" + t1 + " error is: " + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
+    case 'zip':
+      console.log("i am inside of :" + this.value);
+      t1 = !isNaN(this.value)
+      t2 = true;
+      htmlTag = ''
+      if (!t1) { htmlTag += 'number please' };
+
+      console.log("current error flag :" + t1 + " error is: " + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
     default:
       console.log("none matching")
       break;
