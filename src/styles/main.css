@@ -233,3 +233,16 @@ footer li:first-child:before {
     text-align: center;
     width: 20rem;
 }
+
+.form-group {
+    position: relative;
+}
+
+.show-me-error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
