@@ -16,26 +16,52 @@ arrowTag.src = downArrow;
 document.body.className += "js-loading";
 
 const processInput = function processInput() {
+  let t1, t2, errorBox;
+  let htmlTag = '';
   const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const passRegExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   const element = this.getAttribute('data-input');
-  console.log('I got here :' + element);
+  console.log('I got here :' + element + " with value: " + this.value);
+
   switch (element) {
     case 'email':
       console.log(this.value);
-      const t1 = this.value.length === 0;
-      const t2 = !emailRegExp.test(this.value);
-      let htmlTag = ''
+      t1 = this.value.length === 0;
+      t2 = !emailRegExp.test(this.value);
+      htmlTag = ''
       if (t1) { htmlTag += 'Cannot be empty.' };
       if (t2) { htmlTag += 'Valid email please.' }
 
       console.log("current error :" + htmlTag)
       //Check valid email
-      let errorBox = document.getElementById('e-' + element);
+      errorBox = document.getElementById('e-' + element);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
         errorBox.classList.remove('show-me-error');
       }
+      break;
+
+    case 'pass':
+      console.log("i am inside of :" + this.value);
+      t1 = this.value.length === 0;
+      t2 = !passRegExp.test(this.value);
+      htmlTag = ''
+      if (t1) { htmlTag += 'not empty.' };
+      if (t2) { htmlTag += 'min 8 char long, one letter and one number:' }
+
+      console.log("current error :" + htmlTag)
+      //Check valid password
+      errorBox = document.getElementById('e-' + element);
+      console.log("looking to update : " + 'e-' + element)
+      errorBox.innerHTML = htmlTag;
+      errorBox.classList.add('show-me-error');
+      if (!t1 && !t2) {
+        errorBox.classList.remove('show-me-error');
+      }
+      break;
+    default:
+      console.log("none matching")
       break;
   }
 
