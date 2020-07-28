@@ -8,33 +8,34 @@ import rockSvg from './images/01/rocky-dashed.svg';
 import downArrow from './images/01/downarrow.png';
 
 
-let image = document.getElementById("rocky-dashed")
+const image = document.getElementById('rocky-dashed');
 image.src = rockSvg;
 
-let arrowTag = document.getElementById('downarrow')
+const arrowTag = document.getElementById('downarrow');
 arrowTag.src = downArrow;
-document.body.className += "js-loading";
+document.body.className += 'js-loading';
 
 const processInput = function processInput() {
-  let t1, t2, errorBox;
+  let t1; let t2; let
+    errorBox;
   let htmlTag = '';
   const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const passRegExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   const element = this.getAttribute('data-input');
-  console.log('I got here :' + element + " with value: " + this.value);
+  console.log(`I got here :${element} with value: ${this.value}`);
 
   switch (element) {
     case 'email':
       console.log(this.value);
       t1 = this.value.length === 0;
       t2 = !emailRegExp.test(this.value);
-      htmlTag = ''
-      if (t1) { htmlTag += 'Cannot be empty.' };
-      if (t2) { htmlTag += 'Valid email please.' }
+      htmlTag = '';
+      if (t1) { htmlTag += 'Cannot be empty.'; }
+      if (t2) { htmlTag += 'Valid email please.'; }
 
-      console.log("current error :" + htmlTag)
-      //Check valid email
-      errorBox = document.getElementById('e-' + element);
+      console.log(`current error :${htmlTag}`);
+      // Check valid email
+      errorBox = document.getElementById(`e-${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -43,17 +44,17 @@ const processInput = function processInput() {
       break;
 
     case 'pass':
-      console.log("i am inside of :" + this.value);
+      console.log(`i am inside of :${this.value}`);
       t1 = this.value.length === 0;
       t2 = !passRegExp.test(this.value);
-      htmlTag = ''
-      if (t1) { htmlTag += 'not empty.' };
-      if (t2) { htmlTag += 'min 8 char long, one letter and one number:' }
+      htmlTag = '';
+      if (t1) { htmlTag += 'not empty.'; }
+      if (t2) { htmlTag += 'min 8 char long, one letter and one number:'; }
 
-      console.log("current error :" + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error :${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -62,16 +63,16 @@ const processInput = function processInput() {
       break;
 
     case 'add1':
-      console.log("i am inside of :" + this.value);
+      console.log(`i am inside of :${this.value}`);
       t1 = this.value.length > 8;
       t2 = true;
-      htmlTag = ''
-      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+      htmlTag = '';
+      if (!t1) { htmlTag += 'more than 8 charachters please.'; }
 
-      console.log("current error flag :" + t1 + " error is: " + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error flag :${t1} error is: ${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -79,16 +80,16 @@ const processInput = function processInput() {
       }
       break;
     case 'add2':
-      console.log("i am inside of :" + this.value);
+      console.log(`i am inside of :${this.value}`);
       t1 = this.value.length > 8;
       t2 = true;
-      htmlTag = ''
-      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+      htmlTag = '';
+      if (!t1) { htmlTag += 'more than 8 charachters please.'; }
 
-      console.log("current error flag :" + t1 + " error is: " + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error flag :${t1} error is: ${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -96,16 +97,16 @@ const processInput = function processInput() {
       }
       break;
     case 'city':
-      console.log("i am inside of :" + this.value);
+      console.log(`i am inside of :${this.value}`);
       t1 = this.value.length > 8;
       t2 = true;
-      htmlTag = ''
-      if (!t1) { htmlTag += 'more than 8 charachters please.' };
+      htmlTag = '';
+      if (!t1) { htmlTag += 'more than 8 charachters please.'; }
 
-      console.log("current error flag :" + t1 + " error is: " + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error flag :${t1} error is: ${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -113,16 +114,16 @@ const processInput = function processInput() {
       }
       break;
     case 'state':
-      console.log("i am inside of :" + this.value);
+      console.log(`i am inside of :${this.value}`);
       t1 = this.value != 'Choose...';
       t2 = true;
-      htmlTag = ''
-      if (!t1) { htmlTag += 'select an option please' };
+      htmlTag = '';
+      if (!t1) { htmlTag += 'select an option please'; }
 
-      console.log("current error flag :" + t1 + " error is: " + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error flag :${t1} error is: ${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -130,16 +131,16 @@ const processInput = function processInput() {
       }
       break;
     case 'zip':
-      console.log("i am inside of :" + this.value);
-      t1 = !isNaN(this.value)
+      console.log(`i am inside of :${this.value}`);
+      t1 = !isNaN(this.value);
       t2 = true;
-      htmlTag = ''
-      if (!t1) { htmlTag += 'number please' };
+      htmlTag = '';
+      if (!t1) { htmlTag += 'number please'; }
 
-      console.log("current error flag :" + t1 + " error is: " + htmlTag)
-      //Check valid password
-      errorBox = document.getElementById('e-' + element);
-      console.log("looking to update : " + 'e-' + element)
+      console.log(`current error flag :${t1} error is: ${htmlTag}`);
+      // Check valid password
+      errorBox = document.getElementById(`e-${element}`);
+      console.log(`${'looking to update : ' + 'e-'}${element}`);
       errorBox.innerHTML = htmlTag;
       errorBox.classList.add('show-me-error');
       if (!t1 && !t2) {
@@ -147,17 +148,16 @@ const processInput = function processInput() {
       }
       break;
     default:
-      console.log("none matching")
+      console.log('none matching');
       break;
   }
-
-}
+};
 
 console.log('I am here, outside of DOMContentLoaded');
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.className = document.body.className.replace("js-loading", "");
-  /* 
+  document.body.className = document.body.className.replace('js-loading', '');
+  /*
     const form = document.getElementById('form')[0];
     const password = document.getElementById('password');
     const address1 = document.getElementById('address1');
@@ -169,8 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('I am here');
   const inputFields = document.getElementsByClassName('form-input');
   for (let i = 0; i < inputFields.length; i += 1) {
-    console.log('adding listeners')
+    console.log('adding listeners');
     inputFields[i].addEventListener('change', processInput, false);
   }
-
 });
